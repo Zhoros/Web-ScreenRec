@@ -1,0 +1,15 @@
+html, body {
+	
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
+:root {
+  --pico-typography-spacing-vertical: 0;
+  --pico-spacing: 0;
+  --pico-form-element-spacing-vertical: 0.5rem;
+  --pico-form-element-spacing-horizontal: 0.5rem;
+}

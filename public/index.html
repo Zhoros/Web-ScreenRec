@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<link rel="stylesheet" href="pico.min.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+<body>
+
+	<div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+		<div>
+			<button id="startBtn">Start Recording</button>
+			<button id="stopBtn" disabled>Stop Recording</button>
+			<label>
+		</div>
+		<div>
+			<input type="checkbox" id="micCheckbox">
+				Include Microphone
+			</label>
+		</div>
+		<span id="status"></span>
+		<div id="downloads" style="display: flex; justify-content: center; gap: 10px;"></div>
+		<video id="preview" style="width: 50%; display: none;" controls autoplay muted></video>
+	</div>
+
+	<script src="/ffmpeg.min.js"></script>
+	<script src="/recorder.js"></script>
+	<script>
+
+		const startBtn = document.querySelector('#startBtn')
+		const stopBtn = document.querySelector('#stopBtn')
+		const micCheckbox = document.querySelector('#micCheckbox')
+		const preview = document.querySelector('#preview')
+		const status = document.querySelector('#status')
+		const downloadsElement = document.querySelector('#downloads')
+
+		let recorder, screenStream, micStream, mixedStream, chunks = []
+		const { createFFmpeg, fetchFile } = FFmpeg
+		const ffmpeg = createFFmpeg({ log: false })
+		let ffmpegLoaded = false;
+
+		//Load FFMpeg
+		(async function() {
+			status.innerHTML = 'Loading FFmpeg...';
+			await ffmpeg.load();
+			ffmpegLoaded = true;
+			status.textContent = 'FFmpeg loaded and ready';
+		})();
+
+	</script>
+</body>
+</html>

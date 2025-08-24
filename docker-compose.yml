@@ -1,0 +1,6 @@
+services:
+  screenrec:
+    restart: unless-stopped
+    build: .
+    ports:
+      - "80:80"
