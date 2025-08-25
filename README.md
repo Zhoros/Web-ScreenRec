@@ -1,4 +1,7 @@
 # Web ScreenRec
+Lightweight screen recorder running on the web that doesn't require any native installation  
+<ins>**Please star if you like it, thank you!**</ins>
+
 <img width="1763" height="851" alt="image" src="https://github.com/user-attachments/assets/0e557603-45ae-4d3d-9645-46e6892c1195" />
 
 ## Features 🌟
