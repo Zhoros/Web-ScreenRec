@@ -4,9 +4,6 @@ Lightweight screen recorder running on the web that doesn't require any native i
 
 <img width="1763" height="851" alt="image" src="https://github.com/user-attachments/assets/0e557603-45ae-4d3d-9645-46e6892c1195" />
 
-# I'm open to work
-see my github profile for my email
-
 ## Features 🌟
 - This app allows cross-platform screen recording without any installation
 - Can Record screen, microphone and desktop audio simultaneously
